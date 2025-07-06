@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Top Up PUBG Mobile | WebTopUp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png" alt="Logo PUBG" />
+            WirzaStore
+        </div>
+        <div class="navbar-menu">
+            <a href="#">Beranda</a>
+            <a href="#">Produk</a>
+            <a href="#">Tentang</a>
+            <a href="#">Kontak</a>
+        </div>
+        <div class="navbar-cart" id="cartBtn" title="Lihat Keranjang">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img class="hero-banner" src="https://cdn.cloudflare.steamstatic.com/steam/apps/578080/header.jpg" alt="PUBG Mobile Banner">
+        <div class="hero-title">Top Up UC PUBG Mobile Cepat &amp; Aman</div>
+        <div class="hero-desc">Dapatkan UC PUBG Mobile dengan harga terbaik, proses instan, dan pembayaran mudah. Aman, terpercaya, dan 100% legal!</div>
+        <button class="hero-cta" onclick="document.getElementById('userForm').scrollIntoView({behavior:'smooth'})">Mulai Top Up Sekarang</button>
+    </section>
+    <!-- Form Section -->
+    <section class="form-section" id="userForm">
+        <h2>Data Akun PUBG Mobile</h2>
+        <form id="topupForm" autocomplete="off">
+            <div class="form-group">
+                <label for="username">Username PUBG Mobile</label>
+                <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+                <div class="form-error" id="errUsername">Username wajib diisi.</div>
+            </div>
+            <div class="form-group">
+                <label for="uid">Player ID (UID)</label>
+                <input type="text" id="uid" name="uid" placeholder="Masukkan UID" required>
+                <div class="form-error" id="errUID">UID wajib diisi.</div>
+            </div>
+            <div class="form-group">
+                <label for="server">Server</label>
+                <select id="server" name="server" required>
+                    <option value="Asia" selected>Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="North America">North America</option>
+                    <option value="South America">South America</option>
+                    <option value="KRJP">KRJP</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <button type="submit">Simpan Data</button>
+        </form>
+    </section>
+    <!-- Produk UC Section -->
+    <section class="uc-section">
+        <div class="uc-title">Pilih Jumlah UC</div>
+        <div class="uc-grid" id="ucGrid">
+            <!-- UC Cards will be injected by JS -->
+        </div>
+    </section>
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <span class="cart-title"><i class="fas fa-shopping-cart"></i> Keranjang</span>
+            <button class="cart-close" id="cartCloseBtn" title="Tutup">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be injected by JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">Rp 0</span>
+            </div>
+            <button class="cart-checkout" id="cartCheckoutBtn">Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-contact">
+            <i class="fas fa-envelope"></i> Email: support@WirzaStore.com &nbsp; | &nbsp;
+            <i class="fas fa-phone"></i> WhatsApp: +62 852-5576-5223
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/wirzariansyah_?igsh=MWxncTR0Y3Nmb3V5cw==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-copyright">
+            &copy; 2024 WebTopUp. All rights reserved.
+        </div>
+    </footer>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
